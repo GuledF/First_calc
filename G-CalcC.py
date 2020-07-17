@@ -94,18 +94,17 @@ def equals():
         if z == v:
             v = v
             screen.delete(0, END)
-            screen.insert(0, eval(v))
+            screen.insert(0, round(eval(v), 3))
         else:
             v = v + screen.get()
             screen.delete(0, END)
-            screen.insert(0, eval(v))
+            screen.insert(0, round(eval(v), 3))
 
     except Exception:
         screen.insert(0, "Enter Calculations Correctly")
 
-
     if len(screen.get()) > 20:
-        screen.insert(0, ("Error: Enter Correctly             "))
+        screen.insert(0, ("Error                                                               "))
     z = v
     cv = cv + 1
     screen.config(state='disabled')
