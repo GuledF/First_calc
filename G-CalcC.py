@@ -25,7 +25,7 @@ def click(x):
     screen.config(state='normal')
     screen.insert(END, x)
     if len(screen.get()) > 20:
-        screen.insert(0, ("Too many characters********** "))
+        screen.insert(0, ("Too many characters           "))
     screen.config(state='disabled')
 
 
@@ -105,7 +105,7 @@ def equals():
 
 
     if len(screen.get()) > 20:
-        screen.insert(0, ("Too many characters**********"))
+        screen.insert(0, ("Error: Enter Correctly             "))
     z = v
     cv = cv + 1
     screen.config(state='disabled')
