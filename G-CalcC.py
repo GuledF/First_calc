@@ -8,13 +8,13 @@ cv = 0
 
 root = Tk()
 root.title("Calculator!")
-root.configure(bg="dark grey")
-root.geometry("231x363")
+root.configure(bg="Dark Grey")
+root.geometry("231x410")
 root.resizable(width=False, height=False)
 
 
-screen = Entry(root, width=35, borderwidth=7, state='disabled')
-text1 = Label(root, text="Guleds Calculator!", padx=33, pady=20, bg="black", fg="yellow")
+screen = Entry(root, width=21, borderwidth=7, state='disabled', font="times")
+text1 = Label(root, text="Guleds Calculator!", padx=33, pady=25, bg="black", fg="yellow")
 
 
 def click(x):
@@ -24,8 +24,8 @@ def click(x):
         clearst()
     screen.config(state='normal')
     screen.insert(END, x)
-    if len(screen.get()) > 30:
-        screen.insert(0, ("-----Too many characters on screen--------"))
+    if len(screen.get()) > 20:
+        screen.insert(0, ("Too many characters********** "))
     screen.config(state='disabled')
 
 
@@ -104,29 +104,29 @@ def equals():
         screen.insert(0, "Enter Calculations Correctly")
 
 
-    if len(screen.get()) > 30:
-        screen.insert(0, ("Too many characters on screen"))
+    if len(screen.get()) > 20:
+        screen.insert(0, ("Too many characters**********"))
     z = v
     cv = cv + 1
     screen.config(state='disabled')
 
 
-b0 = Button(root, text="0", padx=20, pady=20, command=lambda: click("0"))
-b1 = Button(root, text="1", padx=20, pady=20, command=lambda: click("1"))
-b2 = Button(root, text="2", padx=20, pady=20, command=lambda: click("2"))
-b3 = Button(root, text="3", padx=20, pady=20, command=lambda: click("3"))
-b4 = Button(root, text="4", padx=20, pady=20, command=lambda: click("4"))
-b5 = Button(root, text="5", padx=20, pady=20, command=lambda: click("5"))
-b6 = Button(root, text="6", padx=20, pady=20, command=lambda: click("6"))
-b7 = Button(root, text="7", padx=20, pady=20, command=lambda: click("7"))
-b8 = Button(root, text="8", padx=20, pady=20, command=lambda: click("8"))
-b9 = Button(root, text="9", padx=20, pady=20, command=lambda: click("9"))
-clear = Button(root, text="Clear", padx=38, pady=20, command=clearst)
-dev = Button(root, text="/", padx=22, pady=20, command=division)
-add = Button(root, text="+", padx=20, pady=20, command=addition)
-less = Button(root, text="-", padx=21, pady=20, command=subtraction)
-mul = Button(root, text="*", padx=21, pady=20, command=multiplication)
-eq = Button(root, text="=", padx=20, pady=20, command=equals)
+b0 = Button(root, text="0", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("0"))
+b1 = Button(root, text="1", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("1"))
+b2 = Button(root, text="2", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("2"))
+b3 = Button(root, text="3", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("3"))
+b4 = Button(root, text="4", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("4"))
+b5 = Button(root, text="5", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("5"))
+b6 = Button(root, text="6", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("6"))
+b7 = Button(root, text="7", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("7"))
+b8 = Button(root, text="8", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("8"))
+b9 = Button(root, text="9", padx=10, pady=10, bg="grey", font="times 20", command=lambda: click("9"))
+clear = Button(root, text="Clear", padx=15, pady=10, bg="grey", font="times 20", command=clearst)
+dev = Button(root, text="/", padx=13, pady=10, bg="grey", font="times 20", command=division)
+add = Button(root, text="+", padx=10, pady=10, bg="grey", font="times 20", command=addition)
+less = Button(root, text="-", padx=12, pady=10, bg="grey", font="times 20", command=subtraction)
+mul = Button(root, text="*", padx=10, pady=10, bg="grey", font="times 20", command=multiplication)
+eq = Button(root, text="=", padx=10, pady=10, bg="grey", font="times 20", command=equals)
 
 
 b0.grid(row=8, column=0, padx=1, pady=1)
